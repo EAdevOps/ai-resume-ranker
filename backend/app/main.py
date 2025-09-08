@@ -14,10 +14,25 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
+    """
+    Health check endpoint.
+    Returns a simple message indicating the backend is running.
+    """
     return {"message": "Backend is running"}
 
 @app.post("/match")
 def match_resume(jobPosting: str = Body(...), resumeText: str = Body(...)):
+    """
+    Matches a resume against a job posting and returns a similarity score,
+    matched keywords, and missing keywords.
+
+    Args:
+        jobPosting (str): The job description text.
+        resumeText (str): The resume text.
+
+    Returns:
+        dict: Contains 'rating' (score), 'matched' (keywords), and 'missing' (keywords).
+    """
     if not jobPosting.strip() or not resumeText.strip():
         raise HTTPException(status_code=400, detail="jobPosting and resumeText cannot be empty")
     ranker = ResumeRanker()
