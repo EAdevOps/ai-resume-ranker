@@ -98,3 +98,34 @@ async def upload_files(
     resume_text = await extract_text(resume_file)
     job_text = await extract_text(job_file)
     return {"resumeText": resume_text, "jobPosting": job_text}
+
+@app.post("/upload-resume")
+async def upload_resume(resume_file: UploadFile = File(...)):
+    """Accepts a single resume file (PDF/DOCX), extracts text, and returns it."""
+    async def extract_text(file: UploadFile):
+        if file.filename.endswith(".pdf"):
+            try:
+                import fitz  # PyMuPDF
+                pdf_bytes = await file.read()
+                doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+                text = ""
+                for page in doc:
+                    text += page.get_text()
+                return text
+            except Exception as e:
+                raise HTTPException(status_code=400, detail=f"PDF extraction error: {str(e)}")
+        elif file.filename.endswith(".docx"):
+            try:
+                import docx
+                doc_bytes = await file.read()
+                doc_stream = io.BytesIO(doc_bytes)
+                doc = docx.Document(doc_stream)
+                text = "\n".join([para.text for para in doc.paragraphs])
+                return text
+            except Exception as e:
+                raise HTTPException(status_code=400, detail=f"DOCX extraction error: {str(e)}")
+        else:
+            raise HTTPException(status_code=400, detail="Unsupported file type. Only PDF and DOCX are allowed.")
+
+    resume_text = await extract_text(resume_file)
+    return {"resumeText": resume_text}

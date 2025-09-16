@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
 
-    const backendResponse = await fetch('http://localhost:8001/match', {
+    const backendResponse = await fetch('http://localhost:8000/match', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ jobPosting, resumeText }),
