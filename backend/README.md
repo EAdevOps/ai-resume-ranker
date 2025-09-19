@@ -12,7 +12,7 @@ This backend powers the AI Resume Ranker application, providing endpoints to com
 2. **Run the FastAPI server:**
    ```bash
    cd backend
-   PYTHONPATH=. uvicorn app.main:app --reload --port 8001
+   PYTHONPATH=. uvicorn app.main:app --reload --port 8000
    ```
 
 ## API Endpoints
