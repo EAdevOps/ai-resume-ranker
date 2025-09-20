@@ -9,6 +9,7 @@ python-docx==1.1.2
 python-dotenv==1.0.1
 python-multipart==0.0.12
 pydantic==2.8.2
+pytest
 jiter
 torch==2.5.1
 spacy==3.8.2
