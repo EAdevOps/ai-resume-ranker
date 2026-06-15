@@ -1,0 +1,395 @@
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 400px;
+  margin: 0 auto 72px;
+  overflow: hidden;
+}
+
+/* Full background image */
+.heroImageWrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Dark overlay */
+.heroImageWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+  pointer-events: none;
+}
+
+/* Content layer — full height, split top/bottom */
+.heroLeft {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  padding: 48px var(--page-px);
+  width: 100%;
+  max-width: 640px;
+}
+
+/* Top group — eyebrow + h1 */
+.heroTop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heroEyebrow {
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+/* Bottom group — subtitle + button */
+.heroBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.heroSubtitle {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 420px;
+}
+
+.heroCtaBtn {
+  min-width: 160px;
+  max-width: 220px;
+}
+
+.heroCtaLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+}
+
+/* ─────────────────────────────────────────
+   STATS
+───────────────────────────────────────── */
+.statsSection {
+  padding: 0 var(--page-px);
+  max-width: var(--max-width);
+  margin: 0 auto 88px;
+  width: 100%;
+}
+
+.statsStrip {
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.statCell {
+  flex: 1;
+  text-align: center;
+  padding: 28px 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.statCell:last-child {
+  border-right: none;
+}
+
+.statNum {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: -1px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* ─────────────────────────────────────────
+   FEATURES
+───────────────────────────────────────── */
+.featuresSection {
+  padding: 0 var(--page-px);
+  max-width: var(--max-width);
+  margin: 0 auto 88px;
+  width: 100%;
+}
+
+.featGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: stretch;
+}
+
+.featGrid > .glass-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.featCard {
+  padding: 32px 28px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.featIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  border: 1px solid;
+}
+
+.featIconTeal {
+  background: rgba(94, 252, 232, 0.06);
+  border-color: rgba(94, 252, 232, 0.15);
+}
+.featIconViolet {
+  background: rgba(115, 110, 254, 0.08);
+  border-color: rgba(115, 110, 254, 0.2);
+}
+.featIconRose {
+  background: rgba(253, 164, 175, 0.07);
+  border-color: rgba(253, 164, 175, 0.18);
+}
+
+.featTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.featDesc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.featWideGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.featWideGrid > .glass-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.featWideCard {
+  padding: 32px;
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.featWideIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border: 1px solid;
+}
+
+.featWideBody h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.featWideBody p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ─────────────────────────────────────────
+   PRICING
+───────────────────────────────────────── */
+.pricingSection {
+  padding: 0 var(--page-px);
+  max-width: 1000px;
+  margin: 0 auto 100px;
+  width: 100%;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.priceCard {
+  padding: 36px 28px;
+}
+
+.priceBadge {
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.priceTier {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.priceVal {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.6rem;
+  letter-spacing: -1.5px;
+  line-height: 1;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.pricePeriod {
+  font-size: 0.8rem;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 24px;
+}
+
+.priceDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin-bottom: 22px;
+}
+
+.priceFeatures {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.priceFeatureItem {
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.priceFeatureItem.dim {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.priceCheck {
+  color: #5efce8;
+  font-size: 0.72rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.priceCheck.dim {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.priceCtaDefault {
+  width: 100%;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.priceCtaDefault:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--foreground);
+}
+
+.priceCtaFeatured {
+  width: 100%;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 860px) {
+  .heroLeft {
+    padding: 40px var(--page-px);
+  }
+
+  .heroCtaBtn {
+    width: auto;
+    max-width: 220px;
+  }
+
+  .featGrid,
+  .featWideGrid,
+  .pricingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsStrip {
+    flex-direction: column;
+  }
+
+  .statCell {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .statCell:last-child {
+    border-bottom: none;
+  }
+}
