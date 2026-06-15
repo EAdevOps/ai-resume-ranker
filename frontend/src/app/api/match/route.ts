@@ -11,10 +11,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
 
-    const backendResponse = await fetch("http://127.0.0.1:8000/match", {
+    const backendUrl = process.env.BACKEND_URL || "http://127.0.0.1:8000";
+    const backendResponse = await fetch(`${backendUrl}/match`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ jobPosting, resumeText, mode }), // ← forward mode
+      body: JSON.stringify({ jobPosting, resumeText, mode }),
     });
 
     if (!backendResponse.ok) {
