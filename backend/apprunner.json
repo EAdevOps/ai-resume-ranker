@@ -1,0 +1,14 @@
+{
+  "ImageRepository": {
+    "ImageIdentifier": "279078306163.dkr.ecr.us-east-1.amazonaws.com/rankiq-backend:latest",
+    "ImageConfiguration": {
+      "Port": "8000",
+      "RuntimeEnvironmentVariables": {
+        "ANTHROPIC_API_KEY": "SET_IN_AWS_CONSOLE",
+        "OPENAI_API_KEY": "SET_IN_AWS_CONSOLE"
+      }
+    },
+    "ImageRepositoryType": "ECR"
+  },
+  "AutoDeploymentsEnabled": false
+}

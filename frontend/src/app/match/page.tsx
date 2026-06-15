@@ -100,8 +100,8 @@ export default function MatchPage() {
           <p className={`eyebrow ${styles.roleEyebrow}`}>Step 1 of 2</p>
           <h2 className={styles.roleTitle}>Who are you today?</h2>
           <p className={styles.roleSubtitle}>
-            Tell us your role and we'll tailor the experience to what matters
-            most to you.
+            Tell us your role and we&apos;ll tailor the experience to what
+            matters most to you.
           </p>
           <div className={styles.roleGrid}>
             {[

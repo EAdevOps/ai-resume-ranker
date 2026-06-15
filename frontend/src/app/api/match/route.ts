@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
 
     const data = await backendResponse.json();
     return NextResponse.json(data);
-  } catch (e) {
+  } catch (_e) {
     return NextResponse.json({ error: "Bad request" }, { status: 400 });
   }
 }

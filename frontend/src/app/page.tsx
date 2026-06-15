@@ -122,7 +122,7 @@ export default function Home() {
           {/* Anchors to bottom */}
           <div className={styles.heroBottom}>
             <p className={styles.heroSubtitle}>
-              Whether you're applying or hiring, RankIQ turns resume-to-job
+              Whether you&apos;re applying or hiring, RankIQ turns resume-to-job
               matching into a science.
             </p>
             <div className={`btn-grad-wrap ${styles.heroCtaBtn}`}>
@@ -236,7 +236,7 @@ export default function Home() {
 
       {/* ── FOOTER ── */}
       <footer>
-        <span className="footer-label">rankiq · resume intelligence</span>
+        <span className="footer-label">RankIq · resume intelligence</span>
         <div className="footer-links">
           <a href="#">Privacy</a>
           <a href="#">GitHub</a>

@@ -17,7 +17,7 @@ export default function ScreeningQuestions({ questions, styles }: Props) {
           {questions.map((q, i) => (
             <div key={i} className={styles.qRow}>
               <span className={styles.qSkill}>{q.skill}</span>
-              <p className={styles.qText}>"{q.question}"</p>
+              <p className={styles.qText}>&ldquo;{q.question}&rdquo;</p>
               <p className={styles.qIntent}>{q.intent}</p>
             </div>
           ))}
