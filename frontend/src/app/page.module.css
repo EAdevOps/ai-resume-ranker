@@ -260,12 +260,12 @@
 .pricingGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 24px;
   align-items: start;
 }
 
 .priceCard {
-  padding: 36px 28px;
+  padding: 40px 32px;
 }
 
 .priceBadge {
