@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Montserrat:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
 /* ─────────────────────────────────────────
    DESIGN TOKENS
 ───────────────────────────────────────── */
@@ -28,7 +28,7 @@
 
   /* Typography */
   --font-display: "Syne", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --font-body: "Montserrat", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
   /* Layout */
