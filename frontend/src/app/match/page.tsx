@@ -367,17 +367,6 @@ export default function MatchPage() {
           )}
         </>
       )}
-
-      <footer>
-        <span className="footer-label">
-          rankiq ·{" "}
-          {screen === "role" ? "resume intelligence" : `${screen} mode`}
-        </span>
-        <div className="footer-links">
-          <a href="#">Privacy</a>
-          <a href="#">GitHub</a>
-        </div>
-      </footer>
     </main>
   );
 }
