@@ -203,6 +203,7 @@
   color: var(--foreground);
   font-family: var(--font-body);
   font-size: 1rem;
+  font-weight: 400;
   line-height: 1.7;
   padding: 20px 22px;
   resize: none;
@@ -460,9 +461,9 @@
   display: flex;
   gap: 13px;
   align-items: flex-start;
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .sIcon {
@@ -495,9 +496,9 @@
 }
 
 .suggestionStrong {
-  color: var(--foreground);
+  color: #ffffff;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 /* Screening questions */
