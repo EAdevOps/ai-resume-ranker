@@ -15,7 +15,8 @@
     "pdfjs-dist": "^4.10.38",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "react-pdf": "^10.1.0"
+    "react-pdf": "^10.1.0",
+    "framer-motion": "^11.0.8"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
