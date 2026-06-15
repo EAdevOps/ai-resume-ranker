@@ -233,15 +233,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* ── FOOTER ── */}
-      <footer>
-        <span className="footer-label">RankIq · resume intelligence</span>
-        <div className="footer-links">
-          <a href="#">Privacy</a>
-          <a href="#">GitHub</a>
-        </div>
-      </footer>
     </main>
   );
 }

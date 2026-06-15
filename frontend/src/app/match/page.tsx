@@ -154,7 +154,7 @@ export default function MatchPage() {
               <span
                 className={`badge badge-teal ${isRec ? styles.roleTagRecruiter : ""}`}
               >
-                {isRec ? "// recruiter mode" : "// applicant mode"}
+                {isRec ? "Recruiter mode" : "Applicant mode"}
               </span>
             </div>
             <h1 className={styles.toolTitle}>
