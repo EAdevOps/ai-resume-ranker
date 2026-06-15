@@ -84,6 +84,21 @@ h6 {
   line-height: 1.05;
 }
 
+h1 {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+}
+h2 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+h3 {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+}
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+}
+
 p {
   line-height: 1.65;
 }

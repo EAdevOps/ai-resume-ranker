@@ -60,7 +60,7 @@
 }
 
 .heroTitle {
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
   line-height: 1.05;
 }
 
@@ -123,7 +123,7 @@
 .statNum {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 1.4rem;
   letter-spacing: -1px;
   display: block;
   margin-bottom: 6px;
